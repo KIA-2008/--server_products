@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090b">
+  <title>Аккаунт — Магазин</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="auth-page">
+  <header class="header">
+    <a href="index.html" class="logo">Магазин</a>
+    <nav><a href="index.html">← Вернуться в магазин</a></nav>
+  </header>
+
+  <main class="auth-container">
+    <section class="auth-card">
+      <div class="auth-heading">
+        <span class="auth-eyebrow">ВАШ ПРОФИЛЬ</span>
+        <h1 id="auth-title">Создать аккаунт</h1>
+        <p id="auth-subtitle">Присоединяйтесь — это займёт всего пару минут.</p>
+      </div>
+
+      <div id="auth-message" class="message" role="alert" aria-live="polite"></div>
+
+      <div class="auth-tabs" role="tablist" aria-label="Выбор действия">
+        <button class="auth-tab is-active" id="register-tab" type="button" role="tab" aria-selected="true">Регистрация</button>
+        <button class="auth-tab" id="login-tab" type="button" role="tab" aria-selected="false">Войти</button>
+      </div>
+
+      <form id="register-form" class="auth-form" novalidate>
+        <div class="auth-fields">
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" autocomplete="given-name" placeholder="Ваше имя" minlength="2" maxlength="60" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Фамилия</label>
+            <input id="lastName" name="lastName" type="text" autocomplete="family-name" placeholder="Ваша фамилия" minlength="2" maxlength="60" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="register-email">Электронная почта</label>
+          <input id="register-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" maxlength="120" required>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Телефон <span class="optional-label">необязательно</span></label>
+          <input id="phoneNumber" name="phoneNumber" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" maxlength="25">
+        </div>
+        <div class="form-group">
+          <label for="register-password">Пароль</label>
+          <div class="password-wrap">
+            <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Не менее 6 символов" minlength="6" maxlength="128" required>
+            <button class="password-toggle" type="button" data-password="register-password" aria-label="Показать пароль">Показать</button>
+          </div>
+          <div class="password-hint">Минимум 6 символов</div>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Повторите пароль</label>
+          <div class="password-wrap">
+            <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Введите пароль ещё раз" required>
+            <button class="password-toggle" type="button" data-password="confirm-password" aria-label="Показать пароль">Показать</button>
+          </div>
+        </div>
+        <button class="btn btn-primary auth-submit" type="submit">
+          <span class="button-caption">Создать аккаунт</span><span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="auth-legal">Нажимая кнопку, вы подтверждаете корректность введённых данных.</p>
+      </form>
+
+      <form id="login-form" class="auth-form hidden" novalidate>
+        <div class="form-group">
+          <label for="login-email">Электронная почта</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Пароль</label>
+          <div class="password-wrap">
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Ваш пароль" required>
+            <button class="password-toggle" type="button" data-password="login-password" aria-label="Показать пароль">Показать</button>
+          </div>
+        </div>
+        <button class="btn btn-primary auth-submit" type="submit">
+          <span class="button-caption">Войти в аккаунт</span><span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="auth-legal">Введите почту и пароль, указанные при регистрации.</p>
+      </form>
+
+      <a class="auth-back-link" href="index.html">Продолжить просмотр товаров</a>
+    </section>
+    <div class="auth-decoration" aria-hidden="true"><span></span><span></span><span></span></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__bottom">© 2026 Магазин. Все права защищены.</div>
+  </footer>
+  <script type="module" src="js/effects.js"></script>
+  <script type="module" src="js/pages/auth.js"></script>
+</body>
+</html>

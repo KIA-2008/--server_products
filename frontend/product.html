@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница товара</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Магазин</a>
+    <nav>
+      <a href="index.html">← Назад в каталог</a>
+          <a href="auth.html">Аккаунт</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="loader">Загрузка...</div>
+    <div id="product-details" class="product-details hidden"></div>
+    <div id="error" class="hidden" style="color: red; font-size: 1.2rem; margin-top: 2rem;"></div>
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="footer__content">
+      <a href="index.html" class="footer__logo">Магазин</a>
+      <div class="footer__links">
+        <a href="#">О нас</a>
+        <a href="#">Доставка</a>
+        <a href="#">Контакты</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      © 2026 Магазин. Все права защищены. Сделано с любовью к 3D и анимациям.
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script type="module" src="js/effects.js"></script>
+  <script type="module" src="js/pages/product.js"></script>
+</body>
+</html>
